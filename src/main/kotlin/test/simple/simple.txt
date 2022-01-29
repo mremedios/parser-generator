@@ -1,0 +1,11 @@
+grammar Simple;
+
+start: E;
+
+terminals:
+    Num : "[0-9]+";
+    COLON : ";";
+
+rules:
+e -> e COLON
+e -> _

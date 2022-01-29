@@ -1,0 +1,32 @@
+grammar Calculator;
+
+start: e;
+
+terminals:
+    Num : "[0-9]+";
+    MUL : "\\*";
+    PLUS : "\\+";
+    DIV : "/";
+    MINUS : "-";
+    LParen : "\\(";
+    RParen : "\\)";
+
+rules:
+    e returns [res: Int]
+        -> t ec[_0.res] {$res = _1.res}
+    ec [x: Int] returns [res: Int]
+        -> PLUS t {val y = x + _1.res} ec[y] {$res = _2.res}
+        | MINUS t {val y = x - _1.res} ec[y] {$res = _2.res}
+        | _ {$res = x}
+
+    t returns [res: Int]
+        -> f tc[_0.res] {$res = _1.res}
+
+    tc [x: Int] returns [res: Int]
+        -> MUL f {val y = x * _1.res} tc[y] {$res = _2.res}
+        | DIV f {val y = x / _1.res} tc[y] {$res = _2.res}
+        | _ {$res = x}
+
+    f returns [res: Int]
+        -> LParen e RParen {$res = _1.res}
+        | Num {$res = _0.value.toInt()}

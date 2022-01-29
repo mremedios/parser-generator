@@ -1,0 +1,15 @@
+grammar Regex;
+
+start: expr;
+
+terminals:
+    C : "[a-z]";
+    LParen : "\\(";
+    RParen : "\\)";
+    AST : "\\*";
+    VERT : "\\|";
+
+rules:
+    expr -> nonE | _
+    nonE -> C cont | LParen nonE RParen cont
+    cont -> nonE cont | VERT nonE cont | AST cont | _

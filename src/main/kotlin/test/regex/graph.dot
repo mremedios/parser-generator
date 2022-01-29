@@ -1,0 +1,61 @@
+strict graph {
+	"test.regex.exprNode@13c78c0b" [label="expr"] 
+	"test.regex.exprNode@13c78c0b" -- "test.regex.nonENode@12843fce"
+	"test.regex.nonENode@12843fce" [label="nonE"] 
+	"test.regex.nonENode@12843fce" -- "test.regex.RegexNode@3dd3bcd"
+	"test.regex.nonENode@12843fce" -- "test.regex.contNode@97e1986"
+	"test.regex.RegexNode@3dd3bcd" [label="a"] 
+	"test.regex.contNode@97e1986" [label="cont"] 
+	"test.regex.contNode@97e1986" -- "test.regex.RegexNode@26f67b76"
+	"test.regex.contNode@97e1986" -- "test.regex.contNode@153f5a29"
+	"test.regex.RegexNode@26f67b76" [label="*"] 
+	"test.regex.contNode@153f5a29" [label="cont"] 
+	"test.regex.contNode@153f5a29" -- "test.regex.nonENode@7f560810"
+	"test.regex.contNode@153f5a29" -- "test.regex.contNode@69d9c55"
+	"test.regex.nonENode@7f560810" [label="nonE"] 
+	"test.regex.nonENode@7f560810" -- "test.regex.RegexNode@13a57a3b"
+	"test.regex.nonENode@7f560810" -- "test.regex.nonENode@7ca48474"
+	"test.regex.nonENode@7f560810" -- "test.regex.RegexNode@337d0578"
+	"test.regex.nonENode@7f560810" -- "test.regex.contNode@59e84876"
+	"test.regex.RegexNode@13a57a3b" [label="("] 
+	"test.regex.nonENode@7ca48474" [label="nonE"] 
+	"test.regex.nonENode@7ca48474" -- "test.regex.RegexNode@61a485d2"
+	"test.regex.nonENode@7ca48474" -- "test.regex.contNode@39fb3ab6"
+	"test.regex.RegexNode@61a485d2" [label="b"] 
+	"test.regex.contNode@39fb3ab6" [label="cont"] 
+	"test.regex.contNode@39fb3ab6" -- "test.regex.nonENode@6276ae34"
+	"test.regex.contNode@39fb3ab6" -- "test.regex.contNode@7946e1f4"
+	"test.regex.nonENode@6276ae34" [label="nonE"] 
+	"test.regex.nonENode@6276ae34" -- "test.regex.RegexNode@3c09711b"
+	"test.regex.nonENode@6276ae34" -- "test.regex.contNode@5cc7c2a6"
+	"test.regex.RegexNode@3c09711b" [label="c"] 
+	"test.regex.contNode@5cc7c2a6" [label="cont"] 
+	"test.regex.contNode@5cc7c2a6" -- "test.regex.RegexNode@b97c004"
+	"test.regex.RegexNode@b97c004" [label="EPS"] 
+	"test.regex.contNode@7946e1f4" [label="cont"] 
+	"test.regex.contNode@7946e1f4" -- "test.regex.RegexNode@4590c9c3"
+	"test.regex.RegexNode@4590c9c3" [label="EPS"] 
+	"test.regex.RegexNode@337d0578" [label=")"] 
+	"test.regex.contNode@59e84876" [label="cont"] 
+	"test.regex.contNode@59e84876" -- "test.regex.RegexNode@32e6e9c3"
+	"test.regex.contNode@59e84876" -- "test.regex.contNode@5056dfcb"
+	"test.regex.RegexNode@32e6e9c3" [label="*"] 
+	"test.regex.contNode@5056dfcb" [label="cont"] 
+	"test.regex.contNode@5056dfcb" -- "test.regex.RegexNode@6574b225"
+	"test.regex.contNode@5056dfcb" -- "test.regex.nonENode@2669b199"
+	"test.regex.contNode@5056dfcb" -- "test.regex.contNode@2344fc66"
+	"test.regex.RegexNode@6574b225" [label="|"] 
+	"test.regex.nonENode@2669b199" [label="nonE"] 
+	"test.regex.nonENode@2669b199" -- "test.regex.RegexNode@458ad742"
+	"test.regex.nonENode@2669b199" -- "test.regex.contNode@5afa04c"
+	"test.regex.RegexNode@458ad742" [label="d"] 
+	"test.regex.contNode@5afa04c" [label="cont"] 
+	"test.regex.contNode@5afa04c" -- "test.regex.RegexNode@6ea12c19"
+	"test.regex.RegexNode@6ea12c19" [label="EPS"] 
+	"test.regex.contNode@2344fc66" [label="cont"] 
+	"test.regex.contNode@2344fc66" -- "test.regex.RegexNode@6a024a67"
+	"test.regex.RegexNode@6a024a67" [label="EPS"] 
+	"test.regex.contNode@69d9c55" [label="cont"] 
+	"test.regex.contNode@69d9c55" -- "test.regex.RegexNode@7921b0a2"
+	"test.regex.RegexNode@7921b0a2" [label="EPS"] 
+}
